@@ -9,7 +9,7 @@ size_t binary_tree_depth_r(const binary_tree_t *tree, int is_first)
 {
 	if (!tree)
 		return (0);
-	return (!is_first + binary_tree_depth_r(tree, 0));
+	return (!is_first + binary_tree_depth_r(tree->parent, 0));
 }
 /**
  * binary_tree_depth - measures the depth of a node in a binary tree 
