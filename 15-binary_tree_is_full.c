@@ -6,5 +6,5 @@
  */
 int binary_tree_is_full(const binary_tree_t *tree)
 {
-	return ((tree && (tree->left && tree->right) || (!tree->left && !tree->right)) ? 1 : 0);
+	return ((tree && ((tree->left && tree->right) || (!tree->left && !tree->right))) ? 1 : 0);
 }
