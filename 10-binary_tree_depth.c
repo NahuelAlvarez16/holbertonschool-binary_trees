@@ -7,8 +7,6 @@
  */
 size_t binary_tree_depth_r(const binary_tree_t *tree, int is_first)
 {
-	int left_count = 0, right_count = 0;
-
 	if (!tree)
 		return (0);
 	return (!is_first + binary_tree_depth_r(tree, 0));
