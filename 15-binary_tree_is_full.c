@@ -17,6 +17,8 @@ int binary_tree_is_full_r(const binary_tree_t *tree, int is_first)
 		is_incomplete += binary_tree_is_full_r(tree->right, 0);
 	if (!tree->left ^ !tree->right)
 		return (1 + is_incomplete);
+	if (is_first && !tree->right && !tree->left)
+		return (1);
 	if (!tree->right && !tree->left)
 		return (0);
 	return (is_first ? !is_incomplete : is_incomplete);
